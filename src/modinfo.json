@@ -1,0 +1,10 @@
+﻿{
+  "id": "testmod",
+  "name": "Test Mod",
+  "version": "0.1.0",
+  "authors": "Author",
+  "description": "Put a neat description here",
+  "requirements": [],
+  "requirements_names": [],
+  "checksum_override_version": false
+}
