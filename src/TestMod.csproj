@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="../lib/*.dll" />
+    <Reference Include="../lib/*.dll">
+      <Private>false</Private>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="Exists('$(RainWorldDir)')">
