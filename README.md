@@ -1,2 +1,1 @@
-# TestMod
- Empty mod template for Rain World: Downpour.
+Once cloned, rename `src/TestMod.csproj` and open it to create a solution file in the root folder (Ctrl-Shift-S in Visual Studio). Then edit `src/modinfo.json` and `src/Plugin.cs` to customize your mod.
