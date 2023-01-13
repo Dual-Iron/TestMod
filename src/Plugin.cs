@@ -5,6 +5,10 @@ global using System.Collections.Generic;
 global using UnityEngine;
 
 using BepInEx;
+using System.Security.Permissions;
+
+#pragma warning disable CS0618 // Do not remove the following line.
+[assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
 
 namespace TestMod;
 
