@@ -1,5 +1,5 @@
-Rename `src/TestMod.csproj`, then edit `assets/modinfo.json` and `src/Plugin.cs` to customize your mod.
+Use this template on GitHub or just [download the code](https://github.com/Dual-Iron/TestMod/archive/refs/heads/master.zip), whichever is easiest.
 
-Clone this template using GitHub or just [download the code](https://github.com/Dual-Iron/TestMod/archive/refs/heads/master.zip) itself, whichever is easiest for you.
+Rename `src/TestMod.csproj`, then edit `assets/modinfo.json` and `src/Plugin.cs` to customize your mod.
 
 See [the modding wiki](https://rainworldmodding.miraheze.org/wiki/Downpour_Reference/Mod_Directories) for `modinfo.json` documentation.
