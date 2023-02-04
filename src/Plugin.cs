@@ -1,9 +1,4 @@
-﻿global using System;
-global using System.Linq;
-global using System.Collections.Generic;
-global using UnityEngine;
-
-using BepInEx;
+﻿using BepInEx;
 using System.Security.Permissions;
 
 #pragma warning disable CS0618 // Do not remove the following line.
@@ -14,8 +9,11 @@ namespace TestMod;
 [BepInPlugin("com.author.testmod", "Test Mod", "0.1.0")]
 sealed class Plugin : BaseUnityPlugin
 {
+    bool init;
+
     public void OnEnable()
     {
+        // Add hooks here.
         On.RainWorld.OnModsInit += Init;
     }
 
@@ -23,6 +21,11 @@ sealed class Plugin : BaseUnityPlugin
     {
         orig(self);
 
-        Logger.LogDebug("Hello world!");
+        if (!init) {
+            init = true;
+
+            // Initialize assets, your mod config, and anything that uses RainWorld here.
+            Logger.LogDebug("Hello world!");
+        }
     }
 }
