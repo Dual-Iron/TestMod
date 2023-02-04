@@ -1,8 +1,10 @@
 ﻿using BepInEx;
 using System.Security.Permissions;
 
-#pragma warning disable CS0618 // Do not remove the following line.
+// Allows access to private members
+#pragma warning disable CS0618
 [assembly: SecurityPermission(SecurityAction.RequestMinimum, SkipVerification = true)]
+#pragma warning restore CS0618
 
 namespace TestMod;
 
@@ -13,7 +15,7 @@ sealed class Plugin : BaseUnityPlugin
 
     public void OnEnable()
     {
-        // Add hooks here.
+        // Add hooks here
         On.RainWorld.OnModsInit += Init;
     }
 
@@ -24,7 +26,7 @@ sealed class Plugin : BaseUnityPlugin
         if (!init) {
             init = true;
 
-            // Initialize assets, your mod config, and anything that uses RainWorld here.
+            // Initialize assets, your mod config, and anything that uses RainWorld here
             Logger.LogDebug("Hello world!");
         }
     }
