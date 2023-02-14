@@ -16,18 +16,18 @@ sealed class Plugin : BaseUnityPlugin
     public void OnEnable()
     {
         // Add hooks here
-        On.RainWorld.OnModsInit += Init;
+        On.RainWorld.OnModsInit += OnModsInit;
     }
 
-    private void Init(On.RainWorld.orig_OnModsInit orig, RainWorld self)
+    private void OnModsInit(On.RainWorld.orig_OnModsInit orig, RainWorld self)
     {
         orig(self);
 
-        if (!init) {
-            init = true;
+        if (init) return;
 
-            // Initialize assets, your mod config, and anything that uses RainWorld here
-            Logger.LogDebug("Hello world!");
-        }
+        init = true;
+
+        // Initialize assets, your mod config, and anything that uses RainWorld here
+        Logger.LogDebug("Hello world!");
     }
 }
